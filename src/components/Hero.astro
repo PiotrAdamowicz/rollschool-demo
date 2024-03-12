@@ -1,0 +1,37 @@
+---
+import { Picture } from "astro-imagetools/components";
+
+const imgData = {
+	desktopUrl:'src/assets/heroImage_1920.jpg',
+	tabletUrl:'src/assets/heroImage_1280.jpg',
+	midMobileUrl:'src/assets/heroImage_640.jpg',
+	mobileUrl:'src/assets/heroImage_360.jpg',
+	alt:'Michał skacze na rolkach przez tyczke'
+}
+const {desktopUrl,tabletUrl,midMobileUrl,mobileUrl,alt} = imgData;
+
+
+---
+<section class="grid-content full-width w-full bg-gradient-to-r from-prussian_blue-300 to-azul-400">
+	<div class="mx-auto w-fit">
+		<Picture
+			fit="contain"
+			position="center"
+			src={mobileUrl}
+			alt={alt}
+			artDirectives={[
+			{
+				src:desktopUrl,
+				media:'(min-width: 1280px)'
+			},
+			{
+				src:tabletUrl,
+				media:'(min-width: 640px)'
+			},
+			{
+				src:midMobileUrl,
+				media:'(min-width: 360px)'
+			}
+	]}/>
+</div>
+</section>

@@ -1,10 +1,24 @@
 ---
-import Nav from "../components/navigation/Nav.tsx";
+import Nav from "../components/navigation/Nav.astro";
 import Footer from "../components/Footer.astro"
+import Colors from "../components/Colors.astro";
 ---
-<Nav client:load />
-<main>
-    <slot/>
-</main>
-<Footer />
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>../components/flowbite/header/Header.astro
+<body class="max-w-screen-3xl  mx-auto h-fit">
+    <Nav />
+    <main class="w-full h-full grid grid-cols-12 gap-4 max-w-screen-3xl">
+        <div class="col-start-3 col-span-8 py-20">
+            <slot/>
+        </div>
+    </main>
+    <!-- <Colors /> -->
+    <Footer />
+</body>
+<style>
+    .grid-contnet{
+        display: grid;
+        grid-template-columns: 100px [breakout-start] 100px [content-start] 1fr [content-end] 100px [breakout-end] 100px;
+    }
+    .content-grid>*{
+        grid-column: content;
+    }
+</style>

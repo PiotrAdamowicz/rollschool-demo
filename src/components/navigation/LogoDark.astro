@@ -1,0 +1,13 @@
+---
+const {href,label,src,alt,size=8}=Astro.props.data;
+---
+<div class="flex lg:flex-1">
+    <a href={href} class="-m-1.5 p-1.5 flex gap-4 flex-row-reverse">
+      <span class="text-white text-8xl">{label}</span>
+      <img
+        class={`h-20 w-auto ${size? 'h-'+size:''}`}
+        src={src}
+        alt={alt}
+      />
+    </a>
+</div>

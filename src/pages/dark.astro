@@ -1,0 +1,55 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Colors from '../components/Colors.astro';
+import HamburgerDrawerDark from "../components/navigation/HamburgerDrawerDark.tsx";
+import Logo from "../components/navigation/LogoDark.astro";
+import Hero from "../components/Hero.astro";
+import { links } from "../components/links.ts";
+const { navigation } = links;
+
+const siteTitle = "Dark Theme";
+const siteDescription = "Demo Dark Theme for Rollschool";
+const logoDatra = {
+    href:"/",label:"Roolschool",src:"/logo_transparent_white.svg",alt:"Rollschool Logo",size:20
+}
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={siteTitle} description={siteDescription} />
+	</head>
+	<body class=" w-full h-min overflow-y-auto max-w-screen-3xl relative mx-auto">
+		<header class="flex justify-between m-4">
+			<Logo data={logoDatra}/>
+			<HamburgerDrawerDark data={navigation[3]} client:load/>
+		</header>
+		<Hero />
+		<main class="w-full h-full grid grid-cols-12 gap-4 max-w-screen-3xl">
+			<div class="col-start-3 col-span-8 py-20">
+				<p class="text-white">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nobis adipisci. Nemo cumque vitae molestiae architecto reprehenderit accusamus. Et nam quae praesentium natus obcaecati sit deserunt quam debitis, facilis magni, dolorum ipsum ratione tempore eum ad. Sint, quidem molestias. Alias cum perspiciatis fugit aliquid, dolorum iure mollitia repellendus voluptatibus exercitationem quo ipsum quidem, a saepe, porro omnis sint nam dolore? Nostrum facilis eveniet dicta laboriosam. Quae ratione dolores ea incidunt atque perferendis, doloribus quod eius quis nam, doloremque voluptatum sint, sit distinctio. Optio ipsa iusto eos! In saepe ratione nemo at deleniti ducimus obcaecati et id ea quasi? Quo, eos.
+				</p>
+				<p class="text-white">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nobis adipisci. Nemo cumque vitae molestiae architecto reprehenderit accusamus. Et nam quae praesentium natus obcaecati sit deserunt quam debitis, facilis magni, dolorum ipsum ratione tempore eum ad. Sint, quidem molestias. Alias cum perspiciatis fugit aliquid, dolorum iure mollitia repellendus voluptatibus exercitationem quo ipsum quidem, a saepe, porro omnis sint nam dolore? Nostrum facilis eveniet dicta laboriosam. Quae ratione dolores ea incidunt atque perferendis, doloribus quod eius quis nam, doloremque voluptatum sint, sit distinctio. Optio ipsa iusto eos! In saepe ratione nemo at deleniti ducimus obcaecati et id ea quasi? Quo, eos.
+				</p>
+				<p class="text-white">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nobis adipisci. Nemo cumque vitae molestiae architecto reprehenderit accusamus. Et nam quae praesentium natus obcaecati sit deserunt quam debitis, facilis magni, dolorum ipsum ratione tempore eum ad. Sint, quidem molestias. Alias cum perspiciatis fugit aliquid, dolorum iure mollitia repellendus voluptatibus exercitationem quo ipsum quidem, a saepe, porro omnis sint nam dolore? Nostrum facilis eveniet dicta laboriosam. Quae ratione dolores ea incidunt atque perferendis, doloribus quod eius quis nam, doloremque voluptatum sint, sit distinctio. Optio ipsa iusto eos! In saepe ratione nemo at deleniti ducimus obcaecati et id ea quasi? Quo, eos.
+				</p>
+				<p class="text-white">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nobis adipisci. Nemo cumque vitae molestiae architecto reprehenderit accusamus. Et nam quae praesentium natus obcaecati sit deserunt quam debitis, facilis magni, dolorum ipsum ratione tempore eum ad. Sint, quidem molestias. Alias cum perspiciatis fugit aliquid, dolorum iure mollitia repellendus voluptatibus exercitationem quo ipsum quidem, a saepe, porro omnis sint nam dolore? Nostrum facilis eveniet dicta laboriosam. Quae ratione dolores ea incidunt atque perferendis, doloribus quod eius quis nam, doloremque voluptatum sint, sit distinctio. Optio ipsa iusto eos! In saepe ratione nemo at deleniti ducimus obcaecati et id ea quasi? Quo, eos.
+				</p>
+			</div>
+			<Colors />
+    </main>
+	<footer></footer>
+</body>
+</html>
+
+
+<style>
+	body{
+		background: radial-gradient(circle, hsla(217, 35%, 19%, 1) 5%, hsla(216, 34%, 11%, 1) 50%, hsla(214, 37%, 4%, 1) 100%);
+	}
+</style>

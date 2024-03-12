@@ -1,0 +1,16 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+const siteTitle = "Kontakt";
+const siteDescription = "Kontakt";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={siteTitle} description={siteDescription} />
+	</head>
+		<MainLayout>
+			<p class="text-3xl">{siteTitle}</p>
+		</MainLayout>
+</html>

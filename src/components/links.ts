@@ -1,4 +1,4 @@
-import type { LinksType } from "../../../types";
+import type { LinksType } from "../types/index";
 
 export const links: LinksType = {
   navigation: [

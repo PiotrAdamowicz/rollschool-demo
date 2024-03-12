@@ -1,0 +1,7 @@
+---
+const { data } =Astro.props;
+const { href,label } = data;
+---
+<li class="flex justify-center items-center border-transparent transition-all duration-200 hover:border-b-green_yellow-400 border-4 rounded text-center">
+    <a class="h-fit font-bold bg-gradient-to-r from-azul-500 to-secondary bg-clip-text text-transparent" href={href}>{label}</a>
+</li>

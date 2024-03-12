@@ -1,0 +1,21 @@
+---
+import NavItem from './NavItem.tsx';
+import NavLink from "./NavLink.astro";
+import Logo from "./Logo.astro";
+import { links } from "../links";
+import type { Link } from '../../types';
+
+const { navigation } = links;
+const logoDatra = {
+    href:"/",label:"Roolschool",src:"/logo.jpg",alt:"Rollschool Logo",size:"medium"
+}
+---
+<nav class="p-4 flex w-full">
+    <Logo data={logoDatra}/>
+    <ul class="flex gap-2 justify-between relative text-xl">
+        {navigation.map((link:Link)=>(
+            "subNav" in link? <NavItem data={link} client:load /> :
+            <NavLink data={link} />   
+        ))}
+    </ul>
+</nav>
