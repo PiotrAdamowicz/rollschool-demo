@@ -95,6 +95,9 @@ export default {
       },
       screens: {
         "3xl": "1920px"
+      },
+      dropShadow: {
+        solid: "4px 4px 4px #333333"
       }
     }
   },
