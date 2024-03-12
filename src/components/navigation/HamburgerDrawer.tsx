@@ -14,8 +14,8 @@ export default function HamburgerDrawer({ data }) {
   return (
     <div className="h-full w-fit flex justify-self-center align-middle justify-center">
       <HamburgerButton
-        className="justify-self-center align-middle cursor-pointer hover:scale-95 ease-in-out active:rotate-180 mr-8  absolute rounded transition-all delay-300 text-azul-400 shadow-md shadow-azul-300 bg-transparent  z-10 top-2 right-2 justify-end"
-        size="6rem"
+        className="text-7xl sm:text-8xl sm:mr-8 justify-self-center align-middle cursor-pointer hover:scale-95 ease-in-out absolute rounded transition-all delay-300 text-azul-400 hover:shadow-md hover:sm:shadow-azul-300 bg-transparent z-10 top-2 right-2 justify-end"
+        strokeWidth={5}
         theme="outline"
         onClick={() => setIsOpen(true)}
       />
@@ -49,7 +49,7 @@ export default function HamburgerDrawer({ data }) {
                     <div className="absolute right-0 top-0 z-20 mx-8 flex pr-2 pt-4 ">
                       <button
                         type="button"
-                        className="relative rounded-md text-dim_gray-800 transition-transform duration-300 hover:text-dim_gray-900 hover:rotate-90 focus:outline-none focus:ring-0 ring-0"
+                        className="relative rounded-md text-dim_gray-700 transition-transform duration-300 hover:text-dim_gray-800 hover:rotate-90 focus:outline-none focus:ring-0 ring-0"
                         onClick={() => setIsOpen(false)}
                       >
                         <span className="absolute -inset-2.5" />
@@ -57,8 +57,8 @@ export default function HamburgerDrawer({ data }) {
                         <Close size="5rem" theme="outline" />
                       </button>
                     </div>
-                    <div className="flex h-full flex-col bg-outer_space-300 py-6 shadow-xl">
-                      <div className="relative mt-6 flex-1 px-4 sm:px-6">
+                    <div className="flex h-full flex-col bg-gradient-to-b from-dim_gray-900 to-ruddy_blue-300 py-6 shadow-xl">
+                      <div className="relative mt-6 flex-1">
                         <ul className="mt-10">
                           {navigation.map((link: Link) =>
                             "subNav" in link ? (

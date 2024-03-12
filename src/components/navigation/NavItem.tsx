@@ -8,34 +8,33 @@ export default function NavItem({ data }) {
   return (
     <Menu
       as="li"
-      className="relative flex justify-center align-middle transition-all duration-200 border-transparent border-4  focus-within:border-t-green_yellow-400 hover:border-b-green_yellow-400 rounded"
+      className="relative flex justify-center align-middle transition-all duration-200 border-transparent border-4 hover:border-b-green_yellow-500 rounded"
     >
       <>
         <Menu.Button
           onClick={(e) => setIsShowing((isShowing) => !isShowing)}
-          className="font-bold bg-gradient-to-r from-azul-500 to-azul-400 bg-clip-text text-transparent w-full"
+          className="text-2xl font-bold text-secondary w-full"
         >
           {label}
         </Menu.Button>
         <Transition
           as={Fragment}
-          show={isShowing}
-          enter="transform transition duration-[400ms]"
-          enterFrom="opacity-0 scale-50"
-          enterTo="opacity-100 rotate-0 scale-100"
-          leave="transform duration-200 transition ease-in-out"
-          leaveFrom="opacity-100 rotate-0 scale-100 "
-          leaveTo="opacity-0 scale-95 "
+          enter="transform transition ease-in-out duration-500 sm:duration-700"
+          enterFrom="translate-x-full"
+          enterTo="translate-x-0"
+          leave="transform transition ease-in-out duration-500 sm:duration-700"
+          leaveFrom="translate-x-0"
+          leaveTo="translate-x-full"
         >
-          <Menu.Items className=" text-white absolute w-60 top-full left-0 right-0 bg-gradient-to-b from-prussian_blue-500 to-azul-500 flex justify-center text-center flex-col shadow-2xl rounded gap-1 px-8 py-4">
+          <Menu.Items className="text-white absolute w-full top-full left-0 right-0 bg-gradient-to-b from-prussian_blue-500 to-azul-500 flex justify-center text-center flex-col shadow-2xl rounded gap-1 px-4 py-4">
             {subNav.map((link) => (
               <Menu.Item key={link.href}>
                 {({ active }) => (
                   <a
                     target={target}
                     className={`${
-                      active && "border-b-green_yellow-400"
-                    } border-transparent border-4 rounded transition-all duration-200`}
+                      active && "border-b-green_yellow-500"
+                    } text-xl border-transparent border-4 rounded transition-all duration-200`}
                     href={link.href}
                   >
                     {link.label}
