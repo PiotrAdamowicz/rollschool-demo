@@ -1,16 +1,14 @@
 ---
 import Logo from "./Logo.astro";
 import { links } from "../links";
-
 import HamburgerDrawer from './HamburgerDrawer';
-import Menu from "./Menu.astro";
 
 const { navigation } = links;
 const logoDatra = {
-    href:"/",label:"Roolschool",src:"/logo.jpg",alt:"Rollschool Logo",size:"medium"
+    href:"/",label:"Roolschool",src:"/logo_transparent_blue.png",alt:"Rollschool Logo",size:"medium"
 }
 ---
-<nav class="p-4 flex w-full justify-between">
-    <Logo data={logoDatra}/>
+<nav class="p-4 flex w-full justify-between fixed top-0 left-0 z-10">
+    <Logo data={logoDatra} variant='fixed'/>
     <HamburgerDrawer data={navigation[3]} client:load />
 </nav>

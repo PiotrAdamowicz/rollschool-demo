@@ -14,7 +14,7 @@ export default function HamburgerDrawer({ data }) {
   return (
     <div className="h-full w-fit flex justify-self-center align-middle justify-center">
       <HamburgerButton
-        className="justify-self-center align-middle cursor-pointer active:rotate-180 mr-8  absolute rounded transition-all delay-300 text-azul-500 bg-transparent  z-10 top-2 right-2 justify-end"
+        className="justify-self-center align-middle cursor-pointer hover:scale-95 ease-in-out active:rotate-180 mr-8  absolute rounded transition-all delay-300 text-azul-400 shadow-md shadow-azul-300 bg-transparent  z-10 top-2 right-2 justify-end"
         size="6rem"
         theme="outline"
         onClick={() => setIsOpen(true)}
