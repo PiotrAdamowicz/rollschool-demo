@@ -3,17 +3,17 @@ import { Menu, Transition } from "@headlessui/react";
 
 export default function NavItem({ data }) {
   let [isShowing, setIsShowing] = useState(false);
-  const { label, subNav } = data;
+  const { label, subNav, target = "_self" } = data;
 
   return (
     <Menu
       as="li"
-      className="relative flex justify-center align-middle transition-all duration-200 border-transparent border-4 active:border-t-green_yellow-400 focus-within:border-t-green_yellow-400 hover:border-b-green_yellow-400 rounded"
+      className="relative flex justify-center align-middle transition-all duration-200 border-transparent border-4  focus-within:border-t-green_yellow-400 hover:border-b-green_yellow-400 rounded"
     >
       <>
         <Menu.Button
-          onClick={() => setIsShowing((isShowing) => !isShowing)}
-          className="font-bold bg-gradient-to-r from-azul-500 to-secondary bg-clip-text text-transparent w-full"
+          onClick={(e) => setIsShowing((isShowing) => !isShowing)}
+          className="font-bold bg-gradient-to-r from-azul-500 to-azul-400 bg-clip-text text-transparent w-full"
         >
           {label}
         </Menu.Button>
@@ -32,6 +32,7 @@ export default function NavItem({ data }) {
               <Menu.Item key={link.href}>
                 {({ active }) => (
                   <a
+                    target={target}
                     className={`${
                       active && "border-b-green_yellow-400"
                     } border-transparent border-4 rounded transition-all duration-200`}
