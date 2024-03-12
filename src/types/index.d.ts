@@ -10,4 +10,5 @@ export type BaseLinkType = {
   href: string;
   label: string;
   externalLink?: string;
+  target?: string;
 };

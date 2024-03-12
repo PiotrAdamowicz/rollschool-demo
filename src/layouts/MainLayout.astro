@@ -2,15 +2,19 @@
 import Nav from "../components/navigation/Nav.astro";
 import Footer from "../components/Footer.astro"
 import Colors from "../components/Colors.astro";
+import Hero from "../components/Hero.astro";
 ---
 <body class="max-w-screen-3xl  mx-auto h-fit">
     <Nav />
+    <header class="max-w-screen-3x">
+        <Hero />
+    </header>
     <main class="w-full h-full grid grid-cols-12 gap-4 max-w-screen-3xl">
         <div class="col-start-3 col-span-8 py-20">
             <slot/>
         </div>
     </main>
-    <!-- <Colors /> -->
+    <Colors />
     <Footer />
 </body>
 <style>

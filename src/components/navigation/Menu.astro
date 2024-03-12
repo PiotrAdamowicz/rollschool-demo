@@ -1,0 +1,14 @@
+---
+import NavItem from './NavItem.tsx';
+import NavLink from "./NavLink.astro";
+import { links } from "../links";
+import type { Link } from '../../types';
+
+const { navigation } = links;
+---
+<ul class="flex gap-2 justify-between relative text-xl">
+    {navigation.map((link:Link)=>(
+        "subNav" in link? <NavItem data={link} client:load /> :
+        <NavLink data={link} />   
+    ))}
+</ul>

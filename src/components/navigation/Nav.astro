@@ -1,21 +1,15 @@
 ---
-import NavItem from './NavItem.tsx';
-import NavLink from "./NavLink.astro";
 import Logo from "./Logo.astro";
 import { links } from "../links";
-import type { Link } from '../../types';
+import HamburgerDrawer from './HamburgerDrawer';
+import Hero from "../Hero.astro";
 
 const { navigation } = links;
 const logoDatra = {
-    href:"/",label:"Roolschool",src:"/logo.jpg",alt:"Rollschool Logo",size:"medium"
+    href:"/",label:"Roolschool",src:"/logo_transparent_blue.png",alt:"Rollschool Logo",size:"medium"
 }
 ---
-<nav class="p-4 flex w-full">
-    <Logo data={logoDatra}/>
-    <ul class="flex gap-2 justify-between relative text-xl">
-        {navigation.map((link:Link)=>(
-            "subNav" in link? <NavItem data={link} client:load /> :
-            <NavLink data={link} />   
-        ))}
-    </ul>
+ <nav class="p-4 flex flex-col sm:flex-row w-full h-28 justify-between sticky top-0 left-0 z-10">
+        <Logo data={logoDatra} />
+        <HamburgerDrawer data={navigation[3]} client:load />
 </nav>
