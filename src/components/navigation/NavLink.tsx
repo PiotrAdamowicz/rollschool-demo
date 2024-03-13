@@ -3,7 +3,7 @@ interface Props {
     href: string;
     label: string;
   };
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export default function NavLink({ data, onClick }: Props) {
