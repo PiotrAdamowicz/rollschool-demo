@@ -54,21 +54,22 @@ export default function HamburgerDrawer({ data }) {
                       >
                         <span className="absolute -inset-2.5" />
                         <span className="sr-only">Close panel</span>
-                        <Close size="5rem" theme="outline" />
+                        <Close
+                          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
+                          theme="outline"
+                        />
                       </button>
                     </div>
-                    <div className="flex h-full flex-col bg-gradient-to-b from-dim_gray-900 to-ruddy_blue-300 py-6 shadow-xl">
-                      <div className="relative mt-6 flex-1">
-                        <ul className="mt-10">
-                          {navigation.map((link: Link) =>
-                            "subNav" in link ? (
-                              <NavItem key={link.href} data={link} />
-                            ) : (
-                              <NavLink key={link.href} data={link} />
-                            )
-                          )}
-                        </ul>
-                      </div>
+                    <div className="flex relative h-full flex-col bg-gradient-to-b from-dim_gray-900 to-ruddy_blue-300 py-6 shadow-xl">
+                      <ul className="mt-10 lg:mt-24 space-y-6 2xl:space-y-10">
+                        {navigation.map((link: Link) =>
+                          "subNav" in link ? (
+                            <NavItem key={link.href} data={link} />
+                          ) : (
+                            <NavLink key={link.href} data={link} />
+                          )
+                        )}
+                      </ul>
                     </div>
                   </Dialog.Panel>
                 </Transition.Child>

@@ -8,12 +8,12 @@ export default function NavItem({ data }) {
   return (
     <Menu
       as="li"
-      className="relative flex justify-center align-middle transition-all duration-200 border-transparent border-4 hover:border-b-green_yellow-500 rounded"
+      className="relative flex justify-center align-middle transition-all duration-200 border-transparent border-4 border-l-8 hover:border-l-green_yellow-500 rounded"
     >
       <>
         <Menu.Button
           onClick={(e) => setIsShowing((isShowing) => !isShowing)}
-          className="text-2xl font-bold text-secondary w-full"
+          className="text-2xl sm:text-4xl md:text-5xl lg:text-4xl 2xl:text-5xl font-bold text-secondary w-full"
         >
           {label}
         </Menu.Button>
@@ -26,14 +26,14 @@ export default function NavItem({ data }) {
           leaveFrom="translate-x-0"
           leaveTo="translate-x-full"
         >
-          <Menu.Items className="text-white absolute w-full top-full left-0 right-0 bg-gradient-to-b from-prussian_blue-500 to-azul-500 flex justify-center text-center flex-col shadow-2xl rounded gap-1 px-4 py-4">
+          <Menu.Items className="text-white absolute w-full top-full left-0 right-0 bg-gradient-to-b from-prussian_blue-500 to-azul-500 flex justify-center text-center flex-col shadow-2xl rounded gap-1 px-4 py-8">
             {subNav.map((link) => (
               <Menu.Item key={link.href}>
                 {({ active }) => (
                   <a
                     target={target}
                     className={`${
-                      active && "border-b-green_yellow-500"
+                      active && "border-l-green_yellow-500"
                     } text-xl border-transparent border-4 rounded transition-all duration-200`}
                     href={link.href}
                   >
