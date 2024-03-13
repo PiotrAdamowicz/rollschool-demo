@@ -3,7 +3,7 @@ const {href,label,src,alt,size,variant}=Astro.props.data;
 ---
 <div class="flex">
     <a href={href} class="flex gap-4 flex-row-reverse">
-      <span class:list={["bg-gradient-to-r text-6xl  opacity-90  from-secondary to-azul-500 bg-clip-text text-transparent font-bold", {"sticky top-0 left-0":variant=='sticky'},{'sm:text-8xl':!size}, {'sm:text-7xl':size=="medium"}]}>
+      <span class:list={["bg-gradient-to-r text-5xl opacity-90  from-secondary to-azul-500 bg-clip-text text-transparent font-bold", {"sticky top-0 left-0":variant=='sticky'},{'sm:text-8xl':!size}, {'sm:text-7xl':size=="medium"}]}>
         {label}
       </span>
       <img
