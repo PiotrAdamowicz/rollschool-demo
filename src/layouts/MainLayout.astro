@@ -7,7 +7,7 @@ import Hero from "../components/Hero.astro";
 const {hero} = Astro.props;
 console.log(hero);
 ---
-<body class="max-w-screen-3xl  mx-auto h-fit scroll-smooth">
+<body class="max-w-screen-3xl  mx-auto h-fit scroll-smooth transition-all duration-300">
     <Nav />
     <header class="max-w-screen-3x">
         {hero &&<Hero />}

@@ -66,7 +66,11 @@ export default function HamburgerDrawer({ data }) {
                           "subNav" in link ? (
                             <NavItem key={link.href} data={link} />
                           ) : (
-                            <NavLink key={link.href} data={link} />
+                            <NavLink
+                              onClick={() => setIsOpen(false)}
+                              key={link.href}
+                              data={link}
+                            />
                           )
                         )}
                       </ul>
