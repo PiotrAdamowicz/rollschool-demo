@@ -98,6 +98,20 @@ export default {
       },
       dropShadow: {
         solid: "4px 4px 4px #333333"
+      },
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite",
+        nudge: "nudge 1.2s ease-in-out infinite"
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" }
+        },
+        nudge: {
+          "0% 50%": { transform: "translateX(10px)" },
+          "50%": { transform: "translateX(10px)" }
+        }
       }
     }
   },
