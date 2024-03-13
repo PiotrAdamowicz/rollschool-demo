@@ -26,7 +26,7 @@ export default function NavItem({ data }) {
           leaveFrom="translate-x-0"
           leaveTo="translate-x-full"
         >
-          <Menu.Items className="text-white absolute w-full top-full left-0 right-0 bg-gradient-to-b from-prussian_blue-500 to-azul-500 flex justify-center text-center flex-col shadow-2xl rounded gap-1 px-4 py-8">
+          <Menu.Items className="text-white absolute z-10 w-full top-full left-0 right-0 bg-gradient-to-b from-prussian_blue-500 to-azul-500 flex justify-center text-center flex-col shadow-2xl rounded gap-1 px-4 py-8">
             {subNav.map((link) => (
               <Menu.Item key={link.href}>
                 {({ active }) => (

@@ -12,11 +12,7 @@ export const links: LinksType = {
     },
     {
       href: "/klub-sportowy-rollschool",
-      label: "Klub sportowy rollschool"
-    },
-    {
-      href: "/ofundacji",
-      label: "O Fundacji",
+      label: "Klub sportowy rollschool",
       subNav: [
         {
           href: "/sekcja-sportowa-dla-dzieci",
@@ -29,16 +25,17 @@ export const links: LinksType = {
         {
           href: "/letnie-obozy-rolkowe",
           label: "Letnie obozy rolkowe",
-          externalLink: ""
+          externalLink: "https://www.obozrolkowy.pl/"
         },
         {
           href: "/polkolonie",
-          label: "Półkolonie letnie i zumowe",
-          externalLink: ""
+          label: "Półkolonie letnie i zimowe",
+          externalLink: "https://www.obozrolkowy.pl/"
         },
         {
           href: "/zajecia",
-          label: "Zajęcia dla dzieci i Dorosłych"
+          label: "Zajęcia dla dzieci i Dorosłych",
+          externalLink: "https://zapisy.rollschool.pl/"
         },
         {
           href: "/wspolpraca",
@@ -47,8 +44,16 @@ export const links: LinksType = {
       ]
     },
     {
+      href: "/ofundacji",
+      label: "O Fundacji"
+    },
+    {
       href: "/mazowiecka-liga-bladecross",
-      label: "Mazowiecka Liga Bladecross"
+      label: "Mazowiecka Liga Bladecross",
+      subNav: [
+        { href: "", label: "Dokumenty do pobrania / regulamin" },
+        { href: "/mazowiecka-liga-bladecross", label: "Wyniki" }
+      ]
     },
     {
       href: "/kontakt",
