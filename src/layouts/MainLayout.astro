@@ -7,17 +7,17 @@ import Hero from "../components/Hero.astro";
 const {hero} = Astro.props;
 console.log(hero);
 ---
-<body class="max-w-screen-3xl  mx-auto h-fit">
+<body class="max-w-screen-3xl  mx-auto h-fit scroll-smooth">
     <Nav />
     <header class="max-w-screen-3x">
         {hero &&<Hero />}
     </header>
     <main class="w-full h-full grid grid-cols-12 gap-4 max-w-screen-3xl">
-        <div class="col-start-3 col-span-8 py-20">
+        <div class="col-span-12 sm:col-start-3 sm:col-span-8 py-20">
             <slot/>
         </div>
     </main>
-    <Colors />
+    <!-- <Colors /> -->
     <Footer />
 </body>
 <style>

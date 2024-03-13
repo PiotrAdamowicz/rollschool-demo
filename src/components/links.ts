@@ -56,7 +56,11 @@ export const links: LinksType = {
       ]
     },
     {
-      href: "/kontakt",
+      href: "/wypozyczalnia-rolek",
+      label: "Wypożyczalnia Rolek"
+    },
+    {
+      href: "#kontakt",
       label: "Kontakt"
     }
   ],
@@ -72,10 +76,6 @@ export const links: LinksType = {
     {
       href: "/oferta",
       label: "Oferta"
-    },
-    {
-      href: "/wypozyczalnia-rolek",
-      label: "Wypożyczalnia Rolek"
     }
   ]
 };
