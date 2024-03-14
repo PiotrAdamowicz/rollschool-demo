@@ -14,12 +14,14 @@ const text=["uczymy","jazdy na", "rolkach"].map(item=>item.toUpperCase());
 
 ---
 <section class="w-full relative">
-	<p class="absolute gap-4 z-10 left-0 bottom-0 top-12 sm:top-20 md:top-24 lg:top-32 xl:bottom-72 w-full h-fit px-2 text-center">
-		<span class="text-6xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold drop-shadow-solid text-white">{text[0]}</span>
-		<span class="text-2xl  md:text-4xl  lg:text-5xl xl:text-7xl font-bold drop-shadow-solid text-white">{text[1]}</span>
-		<span class="text-6xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-green_yellow-500 font-bold drop-shadow-solid">{text[2]}</span>
-	</p>
-	<CTA href="https://zapisy.rollschool.pl/" label="Zapisz się"/>
+	<div class="absolute z-10 left-0 bottom-0 top-12 sm:top-20 md:top-24 lg:top-32 xl:bottom-72 w-full h-fit px-2 flex flex-col gap-32 md:gap-20 lg:gap-24 items-center">
+		<p class="text-center">
+			<span class="text-6xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold drop-shadow-solid text-white">{text[0]}</span>
+			<span class="text-2xl  md:text-4xl  lg:text-5xl xl:text-7xl font-bold drop-shadow-solid text-white">{text[1]}</span>
+			<span class="text-6xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-green_yellow-500 font-bold drop-shadow-solid">{text[2]}</span>
+		</p>
+		<CTA href="https://zapisy.rollschool.pl/" label="Zapisz się"/>
+	</div>
 	<div class="mx-auto w-fit">
 		<Picture
 			fit="contain"
