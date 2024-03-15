@@ -13,11 +13,10 @@ console.log(hero);
         {hero &&<Hero />}
     </header>
     <main class="w-full h-full grid grid-cols-12 gap-4 max-w-screen-3xl">
-        <div class="col-span-12 sm:col-start-3 sm:col-span-8 py-20">
+        <div class="col-span-12 sm:col-start-3 sm:col-span-8 py-20 text-2xl">
             <slot/>
         </div>
     </main>
-    <!-- <Colors /> -->
     <Footer />
 </body>
 <style>

@@ -1,26 +1,21 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import MainLayout from '../layouts/MainLayout.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import {pages} from "./metadata.ts";
+const {siteTitle, siteDescription} = pages.home;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={siteTitle} description={siteDescription} />
 	</head>
 		<MainLayout hero={true}>
-			<p class="text-black">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nobis adipisci. Nemo cumque vitae molestiae architecto reprehenderit accusamus. Et nam quae praesentium natus obcaecati sit deserunt quam debitis, facilis magni, dolorum ipsum ratione tempore eum ad. Sint, quidem molestias. Alias cum perspiciatis fugit aliquid, dolorum iure mollitia repellendus voluptatibus exercitationem quo ipsum quidem, a saepe, porro omnis sint nam dolore? Nostrum facilis eveniet dicta laboriosam. Quae ratione dolores ea incidunt atque perferendis, doloribus quod eius quis nam, doloremque voluptatum sint, sit distinctio. Optio ipsa iusto eos! In saepe ratione nemo at deleniti ducimus obcaecati et id ea quasi? Quo, eos.
+			<p class="text-black mb-10">
+				{siteDescription}
 			</p>
-			<p class="text-black">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nobis adipisci. Nemo cumque vitae molestiae architecto reprehenderit accusamus. Et nam quae praesentium natus obcaecati sit deserunt quam debitis, facilis magni, dolorum ipsum ratione tempore eum ad. Sint, quidem molestias. Alias cum perspiciatis fugit aliquid, dolorum iure mollitia repellendus voluptatibus exercitationem quo ipsum quidem, a saepe, porro omnis sint nam dolore? Nostrum facilis eveniet dicta laboriosam. Quae ratione dolores ea incidunt atque perferendis, doloribus quod eius quis nam, doloremque voluptatum sint, sit distinctio. Optio ipsa iusto eos! In saepe ratione nemo at deleniti ducimus obcaecati et id ea quasi? Quo, eos.
-			</p>
-			<p class="text-black">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nobis adipisci. Nemo cumque vitae molestiae architecto reprehenderit accusamus. Et nam quae praesentium natus obcaecati sit deserunt quam debitis, facilis magni, dolorum ipsum ratione tempore eum ad. Sint, quidem molestias. Alias cum perspiciatis fugit aliquid, dolorum iure mollitia repellendus voluptatibus exercitationem quo ipsum quidem, a saepe, porro omnis sint nam dolore? Nostrum facilis eveniet dicta laboriosam. Quae ratione dolores ea incidunt atque perferendis, doloribus quod eius quis nam, doloremque voluptatum sint, sit distinctio. Optio ipsa iusto eos! In saepe ratione nemo at deleniti ducimus obcaecati et id ea quasi? Quo, eos.
-			</p>
-			<p class="text-black">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, nobis adipisci. Nemo cumque vitae molestiae architecto reprehenderit accusamus. Et nam quae praesentium natus obcaecati sit deserunt quam debitis, facilis magni, dolorum ipsum ratione tempore eum ad. Sint, quidem molestias. Alias cum perspiciatis fugit aliquid, dolorum iure mollitia repellendus voluptatibus exercitationem quo ipsum quidem, a saepe, porro omnis sint nam dolore? Nostrum facilis eveniet dicta laboriosam. Quae ratione dolores ea incidunt atque perferendis, doloribus quod eius quis nam, doloremque voluptatum sint, sit distinctio. Optio ipsa iusto eos! In saepe ratione nemo at deleniti ducimus obcaecati et id ea quasi? Quo, eos.
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores distinctio tenetur dolor molestias, rem est voluptas! Quo officiis rem, temporibus ut, perspiciatis dignissimos obcaecati perferendis repellat ducimus eum consequuntur sint sunt soluta minus debitis? Praesentium repellat sed vel assumenda incidunt! Sapiente quis omnis ea aliquam tenetur temporibus reprehenderit ullam sequi officia. Laboriosam omnis animi sit, dolorum cupiditate expedita accusantium quos unde placeat non eveniet magnam mollitia. In dignissimos veniam dolorem a aliquam ea delectus repudiandae, natus architecto illo consequatur similique, officia modi ut doloribus mollitia? Quisquam, omnis ipsam exercitationem obcaecati magnam dolorum, nam vitae quidem velit iusto corrupti sit! Quia.
 			</p>
 		</MainLayout>
 </html>

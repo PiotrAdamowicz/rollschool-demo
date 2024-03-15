@@ -3,14 +3,15 @@ import SocialMedia from "./SocialMedia.astro";
 import { Icon  } from 'astro-icon/components';
 ---
 
-<footer class="flex flex-col gap-4 sm:grid grid-cols-12 bg-secondary py-10 px-4">
+<!-- <footer class="flex flex-col gap-4 sm:grid grid-cols-12 bg-secondary py-10 px-4"> -->
+<footer class="flex flex-col sm:flex-row sm:justify-between gap-8 bg-secondary py-10 px-4 md:px-20">
 		<div id="kontakt" class="kontakt col-span-12 sm:col-start-2 sm:col-span-5">
-			<div class="flex flex-col sm:flex-row gap-8 sm:gap-24">
+			<div class="flex sm:flex-row gap-2 sm:gap-24">
 				<div class="contact-item flex flex-col gap-2 align-middle h-fit">
-					<h4 class="text-white">Adres</h4>
-					<span class="px-4 flex gap-6">
+					<h4 class="text-white text-2xl">Adres</h4>
+					<span class="flex w-fit gap-6">
 						<Icon class="text-white self-start mt-1 text-4xl" name="ant-design:home-outlined" />
-						<p class="text-white self-center mb-0">
+						<p class="text-white text-sm md:text-xl self-center mb-0">
 							ul. Irysowa 27/88<br>
 							02-660 Warszawa<br>
 							pon-pt: godz. 9-16 <br>
@@ -19,26 +20,26 @@ import { Icon  } from 'astro-icon/components';
 					</span>
 				</div>
 				<div class="contact-item flex flex-col gap-2 align-middle h-fit">
-					<h4 class="text-white">Telefon / Email</h4>
-					<span class="px-4 flex gap-6">
-						<Icon class="text-white self-center text-4xl" name="ant-design:phone-outlined" />
-						<p class="text-white self-center m-0">
+					<h4 class="text-white text-2xl">Telefon / Email</h4>
+					<span class="w-fit flex gap-6">
+						<Icon class="text-white text-4xl" name="ant-design:phone-outlined" />
+						<p class="text-white self-center m-0 text-sm md:text-xl">
 							888 555 965
 						</p>
 					</span>
-					<span class="px-4 flex gap-6">
-						<Icon class="text-white self-center text-4xl" name="ant-design:mail-outlined" />
-						<p class="text-white self-center m-0">
+					<span class="w-fit  flex gap-6">
+						<Icon class="text-white text-4xl" name="ant-design:mail-outlined" />
+						<p class="text-white self-center m-0 text-sm md:text-xl">
 							kontakt@rollschool.pl
 						</p>
 					</span>
-					<span class="px-4 flex gap-6">
-						<Icon class="text-white self-center text-4xl" name="ant-design:phone-outlined" />
-						<a href="//zapisy.rollschool.pl/instruktorzy/" class="self-center text-white hover:text-blue-400 transition-all h-fit">Telefony do Instruktorow</a>
+					<span class="w-fit  flex gap-6">
+						<Icon class="text-white text-4xl" name="ant-design:phone-outlined" />
+						<a href="//zapisy.rollschool.pl/instruktorzy/" class="md:text-xl text-sm self-center text-white hover:text-blue-400 transition-all h-fit">Telefony do Instruktorow</a>
 					</span>
 				</div>
 			</div>
 		</div>
-		<SocialMedia className="media-spolecznosciow py-2 sm:self-end flex gap-2 flex-col sm:flex-row sm:justify-end sm:col-span-5 sm:col-end-12" />
+		<SocialMedia className="media-spolecznosciow py-2 px-2 sm:self-end flex gap-2 flex-col lg:flex-row sm:justify-end sm:col-span-4 lg:col-span-5 sm:col-end-12 lg:col-end-12" />
 </footer>
 
